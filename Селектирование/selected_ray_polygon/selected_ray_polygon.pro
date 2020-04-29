@@ -1,0 +1,48 @@
+#-------------------------------------------------
+#
+# Проект создан в среде QtCreator 2019-01-29T20:19:53
+# Автор: Осипов Олег Васильевич
+# Copyright © 2019 БГТУ им. В.Г. Шухова. Кафедра программного обеспечения вычислительной техники и автоматизированных систем. Все права защищены.
+# Обучающие примеры построения селектирующего луча и нахождения точек его пересечения с графическими примитивами: сферой, многоугольником.
+#-------------------------------------------------
+
+QT       += core gui opengl
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+TARGET = selected_ray_polygon
+TEMPLATE = app
+
+# The following define makes your compiler emit warnings if you use
+# any feature of Qt which as been marked as deprecated (the exact warnings
+# depend on your compiler). Please consult the documentation of the
+# deprecated API in order to know how to port your code away from it.
+DEFINES += QT_DEPRECATED_WARNINGS
+
+# You can also make your code fail to compile if you use deprecated APIs.
+# In order to do so, uncomment the following line.
+# You can also select to disable deprecated APIs only up to a certain version of Qt.
+#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+
+
+SOURCES += main.cpp\
+        mainwindow.cpp \
+    myglwidget.cpp \
+    geometry/JPlane.cpp \
+    geometry/JRay.cpp \
+    geometry/JPolygon.cpp \
+    geometry/JCube.cpp \
+    geometry/JSphere.cpp
+
+HEADERS  += mainwindow.h \
+    myglwidget.h \
+    geometry/JPlane.h \
+    geometry/JRay.h \
+    geometry/JPolygon.h \
+    geometry/JCube.h \
+    geometry/JSphere.h
+
+FORMS    += mainwindow.ui
+
+LIBS += -lopengl32 -lglu32
+
