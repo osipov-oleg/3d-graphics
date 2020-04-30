@@ -8,7 +8,7 @@ MyGLWidget::MyGLWidget(QWidget *parent)
     : QGLWidget(parent)
 {
     setWindowTitle("Пересечение примитивов с селектирующим лучом");
-   // setWindowState(Qt::WindowFullScreen);
+    setWindowState(Qt::WindowFullScreen);
 }
 
 void MyGLWidget::initializeGL()

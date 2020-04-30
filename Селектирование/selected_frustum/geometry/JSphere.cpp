@@ -1,4 +1,5 @@
 #include "JSphere.h"
+#include <math.h>
 
 
 JSphere::JSphere()
